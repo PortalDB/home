@@ -15,9 +15,8 @@ const AboutComponent = () => (
         by introducing a new Temporal Graph abstraction (<a href="#/tgraph">TGraph</a>) with four concrete <a href="#/representations">implementations</a>:
         RepresentativeGraph, OneGraph, HybridGraph and Vertex Edge.
         To support evolving graph computation, Portal exposes a set of fundamental <a href="#/operators">operators</a> and <a href="#/analytics">analytics</a> for TGraph.
-      </Container>
-      <Container>
-        Portal is written in scala.  See the API documentation <a href="https://mtg5014.github.io/githubPagesStatic">here</a>.
+        <br/><br/>
+        Portal is written in scala.  See the API documentation <a href="https://portaldb.github.io/api">here</a>.
       </Container>
       <Header size="huge" dividing>Why?</Header>
       <Container>

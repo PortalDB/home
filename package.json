@@ -20,7 +20,7 @@
     "eslint-plugin-react": "^7.4.0",
     "gh-pages": "^1.1.0"
   },
-  "homepage": "https://mtg5014.github.io/githubPagesReact/",
+  "homepage": "https://portaldb.github.io/home/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

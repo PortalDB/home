@@ -14,10 +14,10 @@ const InstallationComponent = () => (
         Portal is written in Scala, here are the jars:
         <ul>
           <li>
-            <a href="https://mtg5014.github.io/githubPagesStatic/portal_2.11-1.0.jar">Standard Jar</a>
+            <a href="https://portaldb.github.io/api/portal_2.11-1.0.jar">Standard Jar</a>
           </li>
           <li>
-            <a href="https://mtg5014.github.io/githubPagesStatic/portal-assembly-1.0.jar">Assembled Jar</a>
+            <a href="https://portaldb.github.io/api/portal-assembly-1.0.jar">Assembled Jar</a>
           </li>
         </ul>
         Ultimately, we will host our artifacts in a well-known, hosted repository, so they can be included in projects without the need to download jars manually.
@@ -44,7 +44,7 @@ const InstallationComponent = () => (
       <Header size="small" dividing>A note on Docker...</Header>
       <Container>
         If you don't know anything about Docker containers, especially how <a href="https://docs.docker.com/engine/admin/volumes/volumes/">volumes</a> work, you should do some reading if you plan on saving any of the code you write in this environment.
-        Here's a sample docker-compose file that might help you out: <a href="https://mtg5014.github.io/githubPagesStatic/docker-compose.yml">docker-compose.yml</a>
+        Here's a sample docker-compose file that might help you out: <a href="https://portaldb.github.io/api/docker-compose.yml">docker-compose.yml</a>
         <br/>
         Drop that in a directory, and start up with this to make sure your changes get saved when you stop the container:
         <SyntaxHighlighter lang="bash">

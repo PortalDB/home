@@ -17,7 +17,7 @@ const MenuComponent = ({children, history}) => (
               <Dropdown.Item as="a" href="#/analytics" text="Analytics" />
             </Dropdown.Menu>
           </Dropdown>
-          <Dropdown.Item as="a" href="https://mtg5014.github.io/githubPagesStatic" text="API" />
+          <Dropdown.Item as="a" href="https://portaldb.github.io/api" text="API" />
           <Dropdown compact basic simple item text="Examples" >
             <Dropdown.Menu>
               <Dropdown.Item as="a" href="#/examples" text="Overview" />
