@@ -4,7 +4,7 @@ import { Container, Header, Segment } from 'semantic-ui-react';
 const AboutComponent = () => (
   <Container>
     <Header size="huge" color="black" block>
-      <img src="portal.png" />
+      <img src="portal.png" alt=""/>
       About
     </Header>
     <Segment>
