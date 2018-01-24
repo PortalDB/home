@@ -1,0 +1,12 @@
+{
+  "main.css": "static/css/main.d41d8cd9.css",
+  "main.css.map": "static/css/main.d41d8cd9.css.map",
+  "main.js": "static/js/main.ca8f73d9.js",
+  "main.js.map": "static/js/main.ca8f73d9.js.map",
+  "static/media/dblpEdges.png": "static/media/dblpEdges.412a8f02.png",
+  "static/media/dblpVertices.png": "static/media/dblpVertices.033e6ea8.png",
+  "static/media/graphCentrality.png": "static/media/graphCentrality.c2b21da7.png",
+  "static/media/starGraph.jpg": "static/media/starGraph.0976f16e.jpg",
+  "static/media/topCollaboratorsScreenshot.png": "static/media/topCollaboratorsScreenshot.2703289f.png",
+  "static/media/vertexInfluence.png": "static/media/vertexInfluence.a1e4a35d.png"
+}
