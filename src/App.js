@@ -9,6 +9,7 @@ import ComingSoonComponent from './ComingSoonComponent';
 import ExamplesComponent from './examples/ExamplesComponent';
 import GraphCentralityComponent from './examples/graphCentrality/GraphCentralityComponent';
 import VertexInfluenceComponent from './examples/vertexInfluence/VertexInfluenceComponent';
+import TGraphInstantiationComponent from './examples/TGraphInstantiation/TGraphInstantiationComponent';
 import HomeComponent from './HomeComponent';
 import InstallationComponent from './InstallationComponent';
 import MenuComponent from './MenuComponent';
