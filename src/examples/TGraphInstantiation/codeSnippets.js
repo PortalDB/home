@@ -1,4 +1,6 @@
-export const emtpyGraph =
+
+
+export const emptyGraph =
 `import edu.drexel.cs.dbgroup.portal.ProgramContext
 import edu.drexel.cs.dbgroup.portal.representations.VEGraph
 
