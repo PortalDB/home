@@ -2,10 +2,8 @@ import React from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { Container, Header, Image, Segment } from 'semantic-ui-react';
 import { emptyGraph, fromDataFrames, fromParquet, fromRDDs } from './codeSnippets';
-import topCollaboratorsScreenshot from './topCollaboratorsScreenshot.png'
-import vertexInfluence from './vertexInfluence.png'
 
-const VertexInfluenceComponent = () => (
+const TGraphInstantiationComponent = () => (
   <Container>
     <Header size="huge" color="black" block>
       <img src="portal.png" />
@@ -36,4 +34,4 @@ const VertexInfluenceComponent = () => (
   </Container>
 );
 
-export default VertexInfluenceComponent;
+export default TGraphInstantiationComponent;
