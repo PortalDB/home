@@ -33,6 +33,7 @@ class App extends Component {
             <Route exact path="/installation" component={InstallationComponent} />
             <Route exact path="/examples" component={ExamplesComponent} />
             <Route exact path="/vertexInfluenceOverTime" component={VertexInfluenceComponent} />
+            <Route exact path="/TGraphInstantiation" component={TGraphInstantiationComponent} />
             <Route exact path="/graphCentralityOverTime" component={GraphCentralityComponent} />
             <Route exact path="/publications" component={PublicationsComponent} />
           </Switch>
