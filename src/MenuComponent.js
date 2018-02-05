@@ -21,6 +21,7 @@ const MenuComponent = ({children, history}) => (
           <Dropdown compact basic simple item text="Examples" >
             <Dropdown.Menu>
               <Dropdown.Item as="a" href="#/examples" text="Overview" />
+              <Dropdown.Item as="a" href="#/TGraphInstantiation" text="TGraph Instantiation" />
               <Dropdown.Item as="a" href="#/vertexInfluenceOverTime" text="Vertex Influence" />
               <Dropdown.Item as="a" href="#/graphCentralityOverTime" text="Graph Centrality" />
             </Dropdown.Menu>
