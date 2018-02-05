@@ -43,11 +43,13 @@ import org.apache.spark.sql.DataFrame
 import sqlContext.implicits._
 
 /*
- * the vertex DataFrames should be in a format that includes a vertex ID, start and end interval dates, plus any properties to associat with the vertex
+ * the vertex DataFrames should be in a format that includes a vertex ID, 
+ * start and end interval dates, plus any properties to associat with the vertex
  */
 case class VertexDF(vid: Long, start: java.sql.Date, end: java.sql.Date, name: String)
 /*
- * the edge DataFrames should be in a similar format, with unique ID's representing each edge as well, since TGraph's are multigraphs
+ * the edge DataFrames should be in a similar format, 
+ * with unique ID's representing each edge as well, since TGraph's are multigraphs
  */
 case class EdgeDF(eid: Long, vid1: Long, vid2: Long, start: java.sql.Date, end: java.sql.Date, count: Int)
 
