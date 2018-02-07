@@ -79,7 +79,10 @@ val veGraphFromDataFrames = VEGraph.fromDataFrames(vertexDfs, edgeDfs, "Default"
 
 
 export const fromParquet = 
-`import scala.reflect.io.Directory
+`import java.sql.Date
+import java.time.LocalDate
+
+import scala.reflect.io.Directory
 import scala.reflect.io.Path
 import edu.drexel.cs.dbgroup.portal.{Interval, ProgramContext, TEdge}
 import org.apache.spark.graphx.VertexId
@@ -111,5 +114,43 @@ val friendships: RDD[(TEdge[Int])] = sc.parallelize(Array(
 ))
 
 import sqlContext.implicits._
-`; 
 
+/*
+ * the vertex DataFrames should be in a format that includes a vertex ID, start and end interval dates, plus any properties to associaet with the vertex
+ * IMPORTANT: for parquet, the vid, estart, and eend column names matter!
+ */
+case class VertexDF(vid: Long, estart: java.sql.Date, eend: java.sql.Date, attr: String)
+/*
+ * the edge DataFrames should be in a similar format, with unique ID's representing each edge as well, since TGraph's are multigraphs
+ * IMPORTANT: for parquet, the eid, vid1, vid1, estart, and eend column names matter!
+ */
+case class EdgeDF(eid: Long, vid1: Long, vid2: Long, estart: java.sql.Date, eend: java.sql.Date, attr: Int)
+
+val vertexDfs: DataFrame = users.map{
+  case (vertexId, (interval, attribute)) =>
+    VertexDF(
+      vertexId,
+      Date.valueOf(interval.start),
+      Date.valueOf(interval.end),
+      attribute
+    )
+}.toDF()
+
+val edgeDfs: DataFrame = friendships.map{
+  friendship =>
+    EdgeDF(
+      friendship.eId,
+      friendship.srcId,
+      friendship.dstId,
+      Date.valueOf(friendship.interval.start),
+      Date.valueOf(friendship.interval.end),
+      friendship.attr
+    )
+}.toDF()
+
+// now we can save the dataframes to disk in the form of parquet files
+
+vertexDfs.write.parquet("file:///zeppelin/parquet/nodes.parquet")
+edgeDfs.write.parquet("file:///zeppelin/parquet/edgeswids.parquet")
+
+val veGraphFromParquet = GraphLoader.buildVE("file:///zeppelin",1,1,Interval(LocalDate.MIN,LocalDate.MAX))`;

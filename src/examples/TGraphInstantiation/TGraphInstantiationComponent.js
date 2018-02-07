@@ -23,11 +23,11 @@ const TGraphInstantiationComponent = () => (
       <SyntaxHighlighter lang="scala" showLineNumbers children={fromRDDs} />
     </Segment>
     <Segment>
-      <Header>3. From fromDataFrames</Header>
+      <Header>3. From DataFrames</Header>
       <SyntaxHighlighter lang="scala" showLineNumbers children={fromDataFrames} />
     </Segment>
     <Segment>
-      <Header>4. From fromParquet</Header>
+      <Header>4. From Parquet</Header>
       <SyntaxHighlighter lang="scala" showLineNumbers children={fromParquet} />
     </Segment>
 
