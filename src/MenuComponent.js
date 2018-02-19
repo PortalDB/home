@@ -50,6 +50,7 @@ class ExamplesDropdown extends Component {
       <Dropdown basic simple item text="Examples" open={this.state.open} onMouseLeave={() => this.setState({ ...this.state, docs: false })} >
         <Dropdown.Menu>
           <Dropdown.Item as="a" href="#/examples" text="Overview" onMouseLeave={() => this.setState({ open: false })}/>
+          <Dropdown.Item as="a" href="#/TGraphInstantiation" text="TGraph Instantiation" onMouseLeave={() => this.setState({ open: false })}/>
           <Dropdown.Item as="a" href="#/vertexInfluenceOverTime" text="Vertex Influence" onMouseLeave={() => this.setState({ open: false })}/>
           <Dropdown.Item as="a" href="#/graphCentralityOverTime" text="Graph Centrality" onMouseLeave={() => this.setState({ open: false })}/>
         </Dropdown.Menu>
