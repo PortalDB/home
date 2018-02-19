@@ -1,27 +1,41 @@
 import React, { Component } from 'react';
-import {
-  HashRouter, Route,
-  Switch
-} from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import AboutComponent from './docs/AboutComponent';
 import AnalyticsComponent from './docs/tgraph/AnalyticsComponent';
-import ComingSoonComponent from './ComingSoonComponent';
+import OperatorsComponent from './docs/tgraph/OperatorsComponent';
+import RepresentationsComponent from './docs/tgraph/RepresentationsComponent';
+import TGraphComponent from './docs/tgraph/TGraphComponent';
 import ExamplesComponent from './examples/ExamplesComponent';
 import GraphCentralityComponent from './examples/graphCentrality/GraphCentralityComponent';
 import VertexInfluenceComponent from './examples/vertexInfluence/VertexInfluenceComponent';
 import HomeComponent from './HomeComponent';
 import InstallationComponent from './InstallationComponent';
 import MenuComponent from './MenuComponent';
-import OperatorsComponent from './docs/tgraph/OperatorsComponent';
-import RepresentationsComponent from './docs/tgraph/RepresentationsComponent';
-import TGraphComponent from './docs/tgraph/TGraphComponent';
 import PublicationsComponent from './PublicationsComponent';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { width: 0, height: 0 };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
   render() {
     return (
       <HashRouter>
-        <MenuComponent>
+        <MenuComponent width={this.state.width}>
           <Switch>
             <Route exact path="/" component={HomeComponent} />
             <Route exact path="/about" component={AboutComponent} />

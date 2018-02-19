@@ -1,26 +1,26 @@
 import React from 'react';
 import {
+  Container,
   Grid, Header,
   Image
 } from 'semantic-ui-react';
 
 const HomeComponent = () => (
-  <Header size="huge" color="black" block>
-    <Grid verticalAlign="middle">
-      <Grid.Column width="4">
-        <Image size="medium" src="portal.png" style={{margin: 'auto'}}/>
-      </Grid.Column>
-      <Grid.Column width="12">
+  <Container>
+    <Header size="huge" color="black" block>
+      <img src="portal.png" alt=""/>
+      Home
+      <Header.Subheader>
+        <br/><br/>
         Portal is a system for the exploration of evolving graph data structures.
-        <br/>
+        <br/><br/>
         You can learn more about it at our <a href="#/about">About</a> page and our <a href="#/examples">Examples</a> page.
-        <br/>
+        <br/><br/>
         The beta release is out! See our <a href="#/installation">Installation</a> page to get started,
         or check out the source code on <a href="https://github.com/PortalDB/Portal">Github</a>.
-      </Grid.Column>
-    </Grid>
-
-  </Header>
+      </Header.Subheader>
+    </Header>
+  </Container>
 );
 
 export default HomeComponent
