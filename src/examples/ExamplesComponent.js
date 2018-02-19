@@ -17,24 +17,18 @@ const ExamplesComponent = () => (
       <br/>
       For more information about DBLP, see <a href="https://en.wikipedia.org/wiki/DBLP">Wikipedia</a>.
     </Header>
-    <Grid columns="equal">
+    <Grid columns="equal" stackable>
       <Grid.Row>
         <Grid.Column>
           <Header size="tiny" textAlign="center">
             Vertices
           </Header>
+          <Image src={dblpVertices} size="huge" style={{margin: 'auto'}} />
         </Grid.Column>
         <Grid.Column>
           <Header size="tiny" textAlign="center">
             Edges
           </Header>
-        </Grid.Column>
-      </Grid.Row>
-      <Grid.Row>
-        <Grid.Column>
-          <Image src={dblpVertices} size="huge" style={{margin: 'auto'}} />
-        </Grid.Column>
-        <Grid.Column>
           <Image src={dblpEdges} size="huge" style={{margin: 'auto'}} />
         </Grid.Column>
       </Grid.Row>
@@ -42,6 +36,7 @@ const ExamplesComponent = () => (
     <Header size="medium">
       Examples:
       <ul>
+        <li><a href="#/TGraphInstantiation">TGraph Instantiation</a></li>
         <li><a href="#/vertexInfluenceOverTime">Vertex Influence Over Time</a></li>
         <li><a href="#/graphCentralityOverTime">Graph Centrality Over Time</a></li>
       </ul>

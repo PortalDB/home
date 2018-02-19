@@ -59,22 +59,30 @@ class ExamplesDropdown extends Component {
   }
 }
 
-const MobileMenuComponent = () => (
-  <Menu borderless fluid color="black" inverted>
-    <Dropdown basic simple item icon="bars">
-      <Dropdown.Menu>
-        <Dropdown.Item as="a" href="#/">Home</Dropdown.Item>
-        <Dropdown.Item as="a" href="#/about" onClick={this.closeDropdown}>About</Dropdown.Item>
-        <TGraphDropdown/>
-        <Dropdown.Item as="a" href="https://portaldb.github.io/api">API</Dropdown.Item>
-        <ExamplesDropdown/>
-        <Dropdown.Item as="a" href="#/installation" >Install</Dropdown.Item>
-        <Dropdown.Item as="a" href="#/publications">Publications</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-    <Menu.Item>Portal</Menu.Item>
-  </Menu>
-);
+class MobileMenuComponent extends Component{
+  constructor(props) {
+    super(props);
+
+  }
+  render() {
+    return (
+      <Menu borderless fluid color="black" inverted>
+        <Dropdown item icon={null} trigger={<Icon name='bars' />}>
+          <Dropdown.Menu>
+            <Dropdown.Item as="a" href="#/">Home</Dropdown.Item>
+            <Dropdown.Item as="a" href="#/about">About</Dropdown.Item>
+            <Dropdown.Item as="a" href="#/tgraph">TGraph</Dropdown.Item>
+            <Dropdown.Item as="a" href="https://portaldb.github.io/api">API</Dropdown.Item>
+            <Dropdown.Item as="a" href="#/examples">Examples</Dropdown.Item>
+            <Dropdown.Item as="a" href="#/installation" >Install</Dropdown.Item>
+            <Dropdown.Item as="a" href="#/publications">Publications</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+        <Menu.Item>Portal</Menu.Item>
+      </Menu>
+    );
+  }
+}
 
 const DesktopMenuComponent = () => (
   <Menu borderless fluid color="black" inverted widths="4">
