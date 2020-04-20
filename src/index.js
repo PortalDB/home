@@ -6,5 +6,5 @@ import Footer from './Footer';
 import './App.css'
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root') <Footer />);
+ReactDOM.render(<App />, document.getElementById('root'), <Footer />);
 registerServiceWorker();
