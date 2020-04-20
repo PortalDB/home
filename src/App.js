@@ -54,6 +54,8 @@ class App extends Component {
           </Switch>
         </MenuComponent>
       </HashRouter>
+      <Footer />
+
     );
   }
 }
