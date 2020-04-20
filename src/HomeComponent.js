@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Container,
-  Grid, Header, Footer
+  Grid, Header, Footer,
   Image
 } from 'semantic-ui-react';
 
