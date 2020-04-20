@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Container,
-  Grid, Header,
+  Grid, Header, Footer
   Image
 } from 'semantic-ui-react';
 
@@ -20,6 +20,7 @@ const HomeComponent = () => (
         or check out the source code on <a href="https://github.com/PortalDB/Portal">Github</a>.
       </Header.Subheader>
     </Header>
+    <Footer>  "This research is supported by <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1750179"> NSF CAREER 1750179</a> "Querying Evolving Graphs". </Footer>
   </Container>
 );
 
