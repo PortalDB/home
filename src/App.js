@@ -13,6 +13,7 @@ import HomeComponent from './HomeComponent';
 import InstallationComponent from './InstallationComponent';
 import MenuComponent from './MenuComponent';
 import PublicationsComponent from './PublicationsComponent';
+import Footer from './FooterComponent';
 
 class App extends Component {
   constructor(props) {
