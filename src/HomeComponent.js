@@ -18,6 +18,9 @@ const HomeComponent = () => (
         <br/><br/>
         The beta release is out! See our <a href="#/installation">Installation</a> page to get started,
         or check out the source code on <a href="https://github.com/PortalDB/Portal">Github</a>.
+  
+        This research is supported by <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1750179"> NSF CAREER 1750179</a> "Querying Evolving Graphs".
+
       </Header.Subheader>
     </Header>
   </Container>
