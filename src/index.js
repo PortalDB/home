@@ -6,6 +6,12 @@ import Footer from './Footer';
 import './App.css'
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root')
-  );
+class Hello extends React.Component {  
+    render() {  
+        return <h1>Hello!</h1>;  
+    }  
+}
+
+
+ReactDOM.render(<App />,  document.getElementById('root') );
 registerServiceWorker();

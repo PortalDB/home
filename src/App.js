@@ -35,6 +35,8 @@ class App extends Component {
   }
   render() {
     return (
+      <div>
+      <div class="content">
       <HashRouter>
         <MenuComponent width={this.state.width}>
           <Switch>
@@ -53,7 +55,9 @@ class App extends Component {
           </Switch>
         </MenuComponent>
       </HashRouter>
-
+      </div>
+  <footer className="footer" > <p>This research is supported by <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1750179"> NSF CAREER 1750179 </a>  "Querying Evolving Graphs".</p></footer>      
+</div>
 
     );
   }
